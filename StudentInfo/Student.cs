@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentInfo
 {
@@ -41,22 +37,30 @@ namespace StudentInfo
                 return gender;
             }
         }
-        private Uri imageLink;
-        public Uri ImageLink
+        private string profile;
+        public string Profile
         {
             get
             {
-                return imageLink;
+                return profile;
             }
         }
 
-        public Student(string firstName, string lastName, genderType gender, int age, Uri imageLink)
+        public Student(string firstName, string lastName, genderType gender, int age)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.gender = gender;
             this.age = age;
-            this.imageLink = imageLink;
+        }
+
+        public Student(string firstName, string lastName, genderType gender, int age, string profile)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gender = gender;
+            this.age = age;
+            this.profile = profile;
         }
     }
 }

@@ -5,24 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentInfo"
         mc:Ignorable="d"
-        Title="Student Info" Height="300" Width="500" MinWidth="350" MinHeight="227" ResizeMode="CanMinimize" FontFamily="Open Sans">
+        Title="Student Info" ResizeMode="CanMinimize" FontFamily="Open Sans" Width="400" Height="295" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Image x:Name="image" Margin="10,10,0,0" Source="https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png" HorizontalAlignment="Left" Width="200" Stretch="Fill" Height="200" VerticalAlignment="Top"/>
-        <ProgressBar Margin="10,0,10,10" IsIndeterminate="True" Height="10" VerticalAlignment="Bottom"/>
-        <Button x:Name="button" Content="Find" Margin="215,215,10,0" Click="button_Click" FontSize="16" Height="26" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox2" Margin="10,215,284,0" TextWrapping="Wrap" Text="John Doe" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" VerticalAlignment="Top"/>
-        <GroupBox x:Name="groupBox" Header="Data" Margin="0,10,10,0" Height="200" VerticalAlignment="Top" HorizontalAlignment="Right" Width="269" FontSize="16">
-            <StackPanel Margin="0">
-                <Label x:Name="label" Content="First Name" Margin="0" FontSize="16" VerticalContentAlignment="Center"/>
-                <TextBox x:Name="textBox" Margin="0" TextWrapping="Wrap" Text="John" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <Label x:Name="label1" Content="Last Name" FontSize="16" VerticalContentAlignment="Center"/>
-                <TextBox x:Name="textBox1" TextWrapping="Wrap" Text="Doe" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <Grid Margin="0,8,0,0">
-                    <Label x:Name="label2" Content="Age" Margin="0" HorizontalAlignment="Left" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
-                    <TextBox x:Name="textBox3" TextWrapping="Wrap" Text="38" HorizontalAlignment="Right" Margin="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Width="209"/>
-                </Grid>
-            </StackPanel>
-        </GroupBox>
-
+        <Button x:Name="button" Content="Search" Margin="0,10,10,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="54" Click="button_Click_1"/>
+        <Label x:Name="label" Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ProgressBar Margin="10,41,10,0" VerticalAlignment="Top" Height="10"/>
+        <TreeView x:Name="treeView" Margin="215,56,10,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        <Image x:Name="image" Margin="10,56,184,10" Source="pack://siteoforigin:,,,/Resources/default-user-image.png" Width="200" Height="200"/>
+        <TextBox x:Name="inputBox" Height="26" Margin="59,10,69,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
