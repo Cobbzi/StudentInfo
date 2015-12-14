@@ -28,6 +28,14 @@ namespace StudentInfo
                 return age;
             }
         }
+        private string occupation;
+        public string Occupation
+        {
+            get
+            {
+                return occupation;
+            }
+        }
         public enum genderType { Male, Female };
         private genderType gender;
         public genderType Gender
@@ -46,6 +54,24 @@ namespace StudentInfo
             }
         }
 
+        public Student(string firstName)
+        {
+            this.firstName = firstName;
+        }
+
+        public Student(string firstName, string lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public Student(string firstName, string lastName, genderType gender)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gender = gender;
+        }
+
         public Student(string firstName, string lastName, genderType gender, int age)
         {
             this.firstName = firstName;
@@ -54,12 +80,22 @@ namespace StudentInfo
             this.age = age;
         }
 
-        public Student(string firstName, string lastName, genderType gender, int age, string profile)
+        public Student(string firstName, string lastName, genderType gender, int age, string occupation)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.gender = gender;
             this.age = age;
+            this.occupation = occupation;
+        }
+
+        public Student(string firstName, string lastName, genderType gender, int age, string occupation, string profile)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gender = gender;
+            this.age = age;
+            this.occupation = occupation;
             this.profile = profile;
         }
     }

@@ -32,7 +32,20 @@ namespace StudentInfo
             studentList.Add(new Student("Robert", "Johansson", Student.genderType.Male, 17, "http://www.swebowl.se/ImageVaultFiles/id_87307/cf_6517/2013_Vinnarna_i_U23_t-vlingen.jpg"));
             // Wiktor
             studentList.Add(new Student("Wiktor", "Rydlund", Student.genderType.Male, 17));
-            // Lägger till fler senare
+            // William
+            studentList.Add(new Student("William", "Mauritzon", Student.genderType.Male, 18));
+            // Hampus
+            studentList.Add(new Student("Hampus", "Holmquist Nyberg", Student.genderType.Male, 17));
+            // Nicole
+            studentList.Add(new Student("Nicole", "Doe", Student.genderType.Female, 17));
+            // Elias
+            studentList.Add(new Student("Elias", "Doe", Student.genderType.Male, 17));
+            // Gustaf
+            studentList.Add(new Student("Gustaf", "Jenderman", Student.genderType.Male, 17));
+            // Alexander
+            studentList.Add(new Student("Alexander", "Haag", Student.genderType.Male, 17, "https://pbs.twimg.com/profile_images/563071637336391681/Ye7hOi3O.jpeg"));
+            // krm
+            studentList.Add(new Student("Magnus", "Kronäs", Student.genderType.Male, 17));
         }
 
         private void InitiateTree()
@@ -56,7 +69,10 @@ namespace StudentInfo
                     treeView.Items.Clear();
 
                     Student student = studentList.Find(item => item.FirstName.ToString() == inputBox.Text);
-                    image.Source = new BitmapImage(new Uri(student.Profile, UriKind.RelativeOrAbsolute));
+                    if (student.Profile != string.Empty)
+                        image.Source = new BitmapImage(new Uri(student.Profile, UriKind.RelativeOrAbsolute));
+                    else
+                        image.Source = new BitmapImage(new Uri("/WPFApplication;component/Images/default_user_image.png"));
 
                     string[] items = new string[] { "Name", "Age", "Gender" };
                     string[] itemValues = new string[] { student.FirstName + " " + student.LastName, student.Age.ToString(), student.Gender.ToString() };
